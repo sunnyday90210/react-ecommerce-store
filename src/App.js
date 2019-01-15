@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createGlobalStyle } from 'styled-components';
+import Navbar from './components/Navbar/Navbar';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Alegreya');
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <GlobalStyle />
-        Hi I am testing the font
+        <Navbar />
       </React.Fragment>
     );
   }
