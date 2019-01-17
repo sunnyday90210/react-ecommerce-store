@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import NavbarTwo from './NavbarTwo';
+import SearchBar from '../SearchBar/SearchBar';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -129,6 +131,8 @@ class Navbar extends Component {
             </li>
           </FirstNavList>
         </FirstNav>
+        <SearchBar />
+        <NavbarTwo />
       </Container>
     );
   }
