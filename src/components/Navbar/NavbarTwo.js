@@ -1,16 +1,77 @@
 import React, { Component } from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+const SecondNav = styled.nav`
+  grid-column: 2 / 10;
+  grid-row: 3 / 4;
+  border-top: 0.1rem solid #12376e;
+  border-bottom: 0.1rem solid #12376e;
+`;
+
+const Dropdown = styled.div`
+  display: none;
+`;
+
+const SecondNavList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none;
+`;
+
+const SecondNavLink = styled.a`
+  text-align: center;
+  display: grid;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #12376e;
+  padding: 0.8rem 0;
+  transition: all 0.5s;
+
+  &::before,
+  ::after {
+    content: '';
+    width: 0;
+    height: 0.1rem;
+    background-color: #12376e;
+    display: block;
+    transition: width 3s cubic-bezier(0.55, 0, 0.98, 0.54),
+      background-color 0.5s;
+  }
+
+  &:hover {
+    background-color: #12376e;
+    color: #fff;
+  }
+
+  &::before,
+  ::after {
+    width: 100%;
+    background-color: #fff;
+  }
+`;
+
+const SecondNavItem = styled.li`
+  :hover {
+    background-color: #12376e;
+    color: #fff;
+  }
+
+  &::before,
+  ::after {
+    width: 100%;
+    background-color: #fff;
+  }
+`;
 
 class NavbarTwo extends Component {
   render() {
     return (
-      <nav className="second-nav">
-        <ul className="second-nav-list">
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Furniiture
-            </a>
-            <div className="dropdown">
+      <SecondNav>
+        <SecondNavList>
+          <SecondNavItem>
+            <SecondNavLink href="/">Furniiture</SecondNavLink>
+            <Dropdown>
               <ul className="dropdown-first-list">
                 <li className="dropdown-list-itme">
                   <a href="/" className="dropdown-list-link">
@@ -95,40 +156,28 @@ class NavbarTwo extends Component {
                 alt="dropdown"
                 className="dropdown-image"
               />
-            </div>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Rooms
-            </a>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Kitchen
-            </a>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Outdoor
-            </a>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Lighting
-            </a>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Bed & Bath
-            </a>
-          </li>
-          <li className="second-nav-item">
-            <a href="/" className="second-nav-link">
-              Window
-            </a>
-          </li>
-        </ul>
-      </nav>
+            </Dropdown>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Rooms</SecondNavLink>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Kitchen</SecondNavLink>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Outdoor</SecondNavLink>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Lighting</SecondNavLink>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Bed & Bath</SecondNavLink>
+          </SecondNavItem>
+          <SecondNavItem>
+            <SecondNavLink href="/">Window</SecondNavLink>
+          </SecondNavItem>
+        </SecondNavList>
+      </SecondNav>
     );
   }
 }

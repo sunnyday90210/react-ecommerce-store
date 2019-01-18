@@ -27,7 +27,7 @@ const SocialIcon = styled.i`
   font-size: 1.8rem;
   color: #12376e;
   transition: all 0.2s;
-  :hover {
+  &:hover {
     color: #34598f;
     transform: rotateZ(360deg);
   }
@@ -62,7 +62,7 @@ const FirstNavLink = styled.a`
     margin-right: 0.3rem;
   }
 
-  ::after {
+  &::after {
     content: '';
     width: 0;
     height: 0.1rem;
@@ -72,7 +72,7 @@ const FirstNavLink = styled.a`
     transition: width 0.2s cubic-bezier(0.55, 0, 0.98, 0.54);
   }
 
-  :hover::after {
+  &:hover::after {
     width: 100%;
   }
 `;
