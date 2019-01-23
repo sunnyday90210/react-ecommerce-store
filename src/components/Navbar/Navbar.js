@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavbarTwo from './NavbarTwo';
 import SearchBar from '../SearchBar/SearchBar';
 import styled from 'styled-components';
+import Banner from '../Banner/Banner';
 
 const Container = styled.div`
   display: grid;
@@ -9,7 +10,7 @@ const Container = styled.div`
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content) 70vh;
   grid-row-gap: 1.6rem;
   margin-top: 1.6rem;
 `;
@@ -133,6 +134,7 @@ class Navbar extends Component {
         </FirstNav>
         <SearchBar />
         <NavbarTwo />
+        <Banner />
       </Container>
     );
   }
